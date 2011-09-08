@@ -1,0 +1,55 @@
+Zetx's ScT DLer - Series 1
+
+A couple of big changes in v1. First, the code has been reorganized so that all user variables are in config.rb. Secondly, the script will do basic checks to see if the RSS feed is accessible. 
+
+config.rb variables
+ passkey - Your ScT passkey
+ verbose - Toggles whether to display messages or not (includes "Waiting...", "GET:", "EXISTS:")
+ wait_secs - How many seconds to wait before checking the feed again
+ always_check - Toggles whether or not to always check if the script can access the RSS feed (if it can't it'll stop the script)
+ download_path - Where it downloads the torrents
+ filter_list - Filter list's name
+ sct - URL to the RSS feed (excluding passkey)
+
+Filter Syntax:
+Category|Title1|Title2|...|
+
+-- You must end with a | or the last item will not be parsed properly!
+-- If you wish to download anything from a category, you must have two |'s at the end (see example).
+
+Example:
+TV.HR/XViD|Heroes|
+TV/XViD|House|
+MP3||
+
+
+Changelog
+
+1.11 -- 20061210
++ Fixed		Added another timeout exception to rescue (Hope it works >_>)
+
+1.1 -- 20061208
++ Added		Added a Time Out check (runar)
+
+1.0 -- 20061207
++ Added		RSS checking capablities
++ Moved		Reorganizd it so all user variables are in config.rb
+
+0.3 -- 20061128
++ Fixed		No longer dowloads an existing torrent (ShaunO)
+
+0.21 -- 20061123
++ Fixed		Just fixed a really embarassing error. >_>
+
+0.2 -- 20061122
++ Fixed		Filter critera can now include spaces and is case insensitive (ie. Games/PSP|TOny HawK|)
+
+0.11 -- 20061122
+- Moved variables around, no real changes
+
+0.1 -- 20061121
++ First workable build
+
+-Bug:Global-	Killing the process is messy (must be closed using ctrl+c)
+-Bug:Global-	Does not convert non-alphanumeric characters into spaces
+-Bug:Main-	Will redownload torrent until it is off the RSS feed

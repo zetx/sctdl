@@ -1,0 +1,24 @@
+module Config
+
+# Your ScT passkey
+$passkey = "00"
+
+# Toggle verbose mode (0/1)
+$verbose = 1
+
+# Seconds between downloading the RSS feed
+$wait_secs = 15
+
+# Always check RSS feed status
+$always_check = 0
+
+# Where your torrents are downloaded (needs trailing slash)
+$download_path = "./torrents/"
+
+# Filter list (specifies what to download, see README)
+$filter_list = "filter.lst"
+
+# URL to RSS feed
+$sct = "http://www.scenetorrents.org/rssdl.php?passkey=" + $passkey
+
+end

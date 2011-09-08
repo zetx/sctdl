@@ -1,4 +1,8 @@
-Zetx's ScT DLer - Series 1
+20110907 - Uploaded onto Github for posterity's sake
+
+---
+
+Zetx's ScT DLer
 
 A couple of big changes in v1. First, the code has been reorganized so that all user variables are in config.rb. Secondly, the script will do basic checks to see if the RSS feed is accessible. 
 
